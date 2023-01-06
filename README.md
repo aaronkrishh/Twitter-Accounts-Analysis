@@ -1,4 +1,4 @@
-# Twitter-Accounts-Analysis: Project Overview
+-----------------# Twitter-Accounts-Analysis: Project Overview
 This project was done during a Statistics course. Throughout the term we were given a Twitter data set containing information about different tweets from different accounts. These accounts were either large influencers or organizational accounts. An EDA (Exploratory Data Analysis) was done with RStudio and all visualization came from R. Many statistical methodologies were applied during these analyses. Such as Numerical, finding the MLE, confidence/predication intervals, null hypothesis testing, t-tests and  linear regression models 
 
 ## Table of Contents
@@ -224,9 +224,64 @@ with a slight long right tail.
 
 We are able to develop intervals that contain the true mean value. 
 
-
-
-
-
 ## Analysis 4
 ### Overview
+We will see how we can extend some of the analyses we carried out on previous
+analyses. We will begin with hypothesis testing, looking first at a new variate: the use of hashtags.
+We’ll see how often users are employing this feature, and compare that with past data to see if
+behaviours have changed. Understanding how user behaviour changes over time (or even if it changes
+at all) is of key interest to product developers (and newly-installed CEOs), and can inform whether to
+keep, add, or remove features. This is an opportunity for us to explore that very important principle. We will extene our investigation into the relationship between tweet length and numberof likes received and explores what variates affect the number of likes a tweet receives.
+
+
+### EDA 4
+
+Let the random variable H be the number of tweets which contain at least one hashtag in a random
+sample of n tweets from our study population, and assume that H has a Binomial(n, θ) distribution. We will carry out a test of $H_0$ : θ = 0.14 
+
+My sample contains 1133 tweets, of which 264 contain at least one hashtag. The maximum
+likelihood estimate of θ is 0.233
+
+The observed value of the test statistic for Test A is 9.022, and the resulting p-value is 0. The
+observed value of the test statistic for Test B is 70.055, and the resulting p-value is 0. or Test A and B we conclude that since our p ≤ 0.001, then we have strong evidence against our $H_o$ for Test B we conclude that since p ≤ 0, 001 then ther is strong evidence against our $H_o$ .
+
+**Revisiting Analysis 3**
+
+We will be looking at one of the tranformed data for the variate tweep gap. We will be analyzing the square root tranformed data.
+
+Let X ∼ G(μ, σ) denote the value of the transformed variate for a randomly chosen tweet from the
+study population. We wish to test H0 : μ = $μ_0$ where $μ_0$corresponds to 16 hours on the original,
+untransformed variate. In this case our $μ_0 = 3$
+
+o test H0 : μ = 3 we calculate the observed value of the test statistic using $| ̄Y −μ0|
+S/√n $, where  ̄$Y$ is our sample mean (2.316283), $S$ is our standard deviation (0.8353614), $n$ is our sample size (1132) and $μ_o$ is our null hypothesis (3). We are using this test statistic since the mean and standard deviation
+is unknown. The value of the test statistic for my sample is 13.986. To calculate the p-value we find
+solve $2P (T ≥ 13.986)$ where T ~ t(1132) a t distribution, and the resulting p-value is 0.
+
+We can conclude that there is strong evidence against the null
+hypothesis since we have a p − value ≤ 0.001. This makes sense as we examine our 95% confidence
+interval for μ [2.220069, 2.412498], we can see that our null hypothesis is not within our interval and
+if it it not within our interval then p − value must be ≤ 0.05 which it is.
+
+**Revisiting Analysis 2**
+
+Below we have fitted a regression line where are length of the tweet is our explanatory variate and number of likes is our response variate. The least squares estimate of α is 7.263972530, with 95% confidence interval [6.3395720,
+8.188373014]. The least squares estimate of β is [-0.007017032, with 95% confidence interval [-
+0.0106826, -0.003351467].
+
+We can see that there is very large variability between the the regression line and the standard residuals. We can also see from the QQ-plot that our residuals do not follow a normal distribution 
+
+![image](https://user-images.githubusercontent.com/79017977/211109169-c0171637-f4c5-42ff-bd69-8ab875ef31a7.png)
+
+![image](https://user-images.githubusercontent.com/79017977/211109488-e20c3378-1f45-4582-891b-9261394ad599.png)
+
+###Takeaway 4
+
+We can see that the is no correlation between length of tweets and the number of likes received. 
+
+## Code and Resources
+- Credits to Professor Michael Wallance
+- [Source Code]
+- [Plots]
+
+
