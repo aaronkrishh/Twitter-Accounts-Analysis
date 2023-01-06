@@ -1,4 +1,4 @@
------------------# Twitter-Accounts-Analysis: Project Overview
+# Twitter-Accounts-Analysis: Project Overview
 This project was done during a Statistics course. Throughout the term we were given a Twitter data set containing information about different tweets from different accounts. These accounts were either large influencers or organizational accounts. An EDA (Exploratory Data Analysis) was done with RStudio and all visualization came from R. Many statistical methodologies were applied during these analyses. Such as Numerical, finding the MLE, confidence/predication intervals, null hypothesis testing, t-tests and  linear regression models 
 
 ## Table of Contents
